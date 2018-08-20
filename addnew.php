@@ -1,11 +1,12 @@
 <?php
 	include('conn.php');
-	
-	$firstname=$_POST['firstname'];
-	$lastname=$_POST['lastname'];
-	$address=$_POST['address'];
-	
-	mysqli_query($conn,"insert into user (firstname, lastname, address) values ('$firstname', '$lastname', '$address')");
-	header('location:index.php');
 
+	$name=$_POST['name'];
+	$code=$_POST['code'];
+	$type=$_POST['type'];
+	$biz_name=$_POST['biz_name'];
+	$location=$_POST['location'];
+	
+	mysqli_query($conn,"insert into merchants (merchant_name, merchant_code, m_business_type, m_business_name, m_location) values ('$name', '$code','$type', '$biz_name', '$location')");
+	header('location:index.php');
 ?>
